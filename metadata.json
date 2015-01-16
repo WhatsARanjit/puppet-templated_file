@@ -1,5 +1,5 @@
 {
-  "name": "WhatsARanjit/thing",
+  "name": "WhatsARanjit/templated_file",
   "version": "0.1.0",
   "author": "WhatsARanjit",
   "summary": "Allows you use create_resources() with file resources that require the template() function.",
