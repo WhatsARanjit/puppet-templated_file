@@ -55,7 +55,7 @@ class module {
 
 ##NOTES
 
-In your site.pp, you probably have the follow as setup by the Puppet install:
+In your site.pp, you probably have the following as setup by the Puppet install:
 ```
 File { backup => 'main' }
 ```
