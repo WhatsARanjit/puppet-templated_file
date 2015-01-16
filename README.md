@@ -49,7 +49,17 @@ myfiles:
 
 # $modulepath/module/manifests/init.pp
 class module {
-  create_resources( 'templated_file', hiera('myfiles') }
+  create_resources( 'templated_file', hiera('myfiles') )
 }
 ```
 
+##NOTES
+
+In your site.pp, you probably have the follow as setup by the Puppet install:
+```
+File { backup => 'main' }
+```
+To maintain the same behavior using this type, also add to your site.pp:
+```
+Templated_file { backup => 'main' }
+```
