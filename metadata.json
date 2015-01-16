@@ -1,0 +1,14 @@
+{
+  "name": "WhatsARanjit/thing",
+  "version": "0.1.0",
+  "author": "WhatsARanjit",
+  "summary": "Allows you use create_resources() with file resources that require the template() function.",
+  "license": "Apache 2.0",
+  "source": "https://github.com/WhatsARanjit/puppet-templated_file",
+  "project_page": "https://github.com/WhatsARanjit/puppet-templated_file",
+  "issues_url": "https://github.com/WhatsARanjit/puppet-templated_file/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
