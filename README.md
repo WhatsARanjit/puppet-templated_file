@@ -38,14 +38,19 @@ class module {
 Rather in your hieradata, specify all file attritbutes as you normally would.
 Instead of using the content attribute with the template function, use the
 template attribute and specify the path to the template as you would normally
-in the template function.  For example:
+in the template function.  You can use the `template_format` attribute to toggle
+between 'erb' or 'epp'. The default is 'erb'.  For example:
 ```
 # $hierdatadir/common.yaml
 ---
 myfiles:
   '/tmp/foo.txt':
     ensure: file
-    template: 'module/template.erb'
+    template: 'module/template1.erb'
+  '/tmp/bar.txt':
+    ensure: file
+    template: 'module/template2.epp'
+    template_format: epp
 
 # $modulepath/module/manifests/init.pp
 class module {
