@@ -1,6 +1,6 @@
-#templated_file
+# templated_file
 
-##Overview
+## Overview
 
 Allows you use create_resources() with file resources that require the template() function.
 The template() function is not in Hiera's library so you are at a loss for doing the following:
@@ -33,7 +33,7 @@ class module {
 }
 ```
 
-##Usage
+## Usage
 
 Rather in your hieradata, specify all file attritbutes as you normally would.
 Instead of using the content attribute with the template function, use the
@@ -58,7 +58,7 @@ class module {
 }
 ```
 
-##NOTES
+## NOTES
 
 In your site.pp, you probably have the following as setup by the Puppet install:
 ```
