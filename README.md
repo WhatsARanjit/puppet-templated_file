@@ -1,6 +1,6 @@
-#templated_file
+# templated_file
 
-##Overview
+## Overview
 
 Allows you use create_resources() with file resources that require the template() function.
 The template() function is not in Hiera's library so you are at a loss for doing the following:
@@ -33,19 +33,24 @@ class module {
 }
 ```
 
-##Usage
+## Usage
 
 Rather in your hieradata, specify all file attritbutes as you normally would.
 Instead of using the content attribute with the template function, use the
 template attribute and specify the path to the template as you would normally
-in the template function.  For example:
+in the template function.  You can use the `template_format` attribute to toggle
+between 'erb' or 'epp'. The default is 'erb'.  For example:
 ```
 # $hierdatadir/common.yaml
 ---
 myfiles:
   '/tmp/foo.txt':
     ensure: file
-    template: 'module/template.erb'
+    template: 'module/template1.erb'
+  '/tmp/bar.txt':
+    ensure: file
+    template: 'module/template2.epp'
+    template_format: epp
 
 # $modulepath/module/manifests/init.pp
 class module {
@@ -53,7 +58,7 @@ class module {
 }
 ```
 
-##NOTES
+## NOTES
 
 In your site.pp, you probably have the following as setup by the Puppet install:
 ```

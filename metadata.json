@@ -1,14 +1,50 @@
 {
   "name": "WhatsARanjit-templated_file",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "WhatsARanjit",
-  "summary": "Allows you use create_resources() with file resources that require the template() function.",
-  "license": "Apache 2.0",
+  "summary": "Allows you use create_resources() with file resources that require the template() or epp() functions.",
+  "license": "Apache-2.0",
   "source": "https://github.com/WhatsARanjit/puppet-templated_file",
   "project_page": "https://github.com/WhatsARanjit/puppet-templated_file",
   "issues_url": "https://github.com/WhatsARanjit/puppet-templated_file/issues",
-  "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
-  ]
+  "dependencies": [],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "SLES",
+      "operatingsystemrelease": [
+        "11",
+        "12"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "10.04",
+        "12.04",
+        "14.04",
+        "16.06"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.7.1 < 5.0.0"
+    }
+  ],
+  "description": "Templated_file module"
 }
-
